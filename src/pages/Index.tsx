@@ -220,9 +220,9 @@ export default function Index() {
           className="flex items-center gap-2 transition-transform hover:scale-105"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">А</span>
+            <span className="font-sans text-xl font-bold text-foreground">Т</span>
           </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">AdminNews</span>
+          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Твой Городок</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -265,14 +265,14 @@ export default function Index() {
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
               <span className="text-balance">
-                Всё о серверах
+                Всё про всё
                 <br />
-                <span className="text-foreground/50">для админов</span>
+                <span className="text-foreground/50">о твоём городке</span>
               </span>
             </h1>
             <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/90 duration-1000 delay-200 md:text-xl">
               <span className="text-pretty">
-                Актуальные новости, гайды и обзоры инструментов для системных администраторов. Будь в курсе всего, что происходит в мире серверных технологий.
+                Новости, события и истории твоего города. Всё самое важное и интересное — в одном месте.
               </span>
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">

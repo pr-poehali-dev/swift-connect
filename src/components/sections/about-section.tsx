@@ -23,7 +23,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
                 <br />
                 канале
                 <br />
-                <span className="text-foreground/40">для админов</span>
+                <span className="text-foreground/40">твой городок</span>
               </h2>
             </div>
 
@@ -34,10 +34,10 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                AdminNews — новостной канал для системных администраторов, DevOps-инженеров и всех, кто управляет серверной инфраструктурой.
+                «Твой Городок» — это канал про всё, что происходит в твоём городе: новости, события, люди и истории.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Публикуем только важное: уязвимости, обновления, инструменты и практические советы без воды.
+                Публикуем только актуальное и интересное — без лишнего шума, прямо в точку.
               </p>
             </div>
           </div>
