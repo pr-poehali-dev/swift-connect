@@ -279,7 +279,7 @@ export default function Index() {
               <MagneticButton
                 size="lg"
                 variant="primary"
-                onClick={() => scrollToSection(1)}
+                onClick={() => window.open("https://t.me/TVOI_GORODOK", "_blank")}
               >
                 Читать новости
               </MagneticButton>

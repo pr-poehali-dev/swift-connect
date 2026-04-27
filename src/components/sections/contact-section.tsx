@@ -87,13 +87,20 @@ export function ContactSection() {
                 }`}
                 style={{ transitionDelay: "500ms" }}
               >
-                {["Telegram", "VK", "GitHub", "RSS"].map((social) => (
+                {[
+                  { name: "Telegram", url: "https://t.me/TVOI_GORODOK" },
+                  { name: "VK", url: "#" },
+                  { name: "GitHub", url: "#" },
+                  { name: "RSS", url: "#" },
+                ].map((social) => (
                   <a
-                    key={social}
-                    href="#"
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="border-b border-transparent font-mono text-xs text-foreground/60 transition-all hover:border-foreground/60 hover:text-foreground/90"
                   >
-                    {social}
+                    {social.name}
                   </a>
                 ))}
               </div>

@@ -86,7 +86,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
             Написать нам
           </MagneticButton>
-          <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection?.(1)}>
+          <MagneticButton size="lg" variant="secondary" onClick={() => window.open("https://t.me/TVOI_GORODOK", "_blank")}>
             Читать новости
           </MagneticButton>
         </div>
