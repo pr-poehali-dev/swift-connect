@@ -34,7 +34,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                «Твой Городок» — это канал про всё, что происходит в твоём городе: новости, события, люди и истории.
+                «Твой городок» — это канал про всё, что происходит в твоём городе: новости, события, люди и истории.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
                 Публикуем только актуальное и интересное — без лишнего шума, прямо в точку.
