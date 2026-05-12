@@ -40,7 +40,7 @@ export function WorkSection() {
               number: "03",
               title: "Ansible vs Terraform: что выбрать в 2026",
               category: "Инструменты",
-              year: "Мар 2026",
+              year: "Май 2026",
               direction: "left",
             },
           ].map((project, i) => (
