@@ -1,7 +1,36 @@
 import { useReveal } from "@/hooks/use-reveal"
+import { useEffect, useState } from "react"
+
+const API_URL = "https://functions.poehali.dev/6f0ba384-7ba0-431d-bf97-4f93cbb01a11"
+
+interface NewsItem {
+  id: number
+  title: string
+  category: string
+  published_at: string
+}
+
+const FALLBACK: NewsItem[] = [
+  { id: 1, title: "Linux под угрозой: критическая уязвимость в ядре 6.8", category: "Безопасность", published_at: "Апр 2026" },
+  { id: 2, title: "Kubernetes 1.31: что нового для кластеров", category: "Контейнеризация", published_at: "Апр 2026" },
+  { id: 3, title: "Ansible vs Terraform: что выбрать в 2026", category: "Инструменты", published_at: "Май 2026" },
+]
 
 export function WorkSection() {
   const { ref, isVisible } = useReveal(0.3)
+  const [news, setNews] = useState<NewsItem[]>([])
+
+  useEffect(() => {
+    fetch(API_URL)
+      .then((r) => r.json())
+      .then((data) => {
+        const parsed = JSON.parse(data)
+        setNews(parsed.length > 0 ? parsed : FALLBACK)
+      })
+      .catch(() => setNews(FALLBACK))
+  }, [])
+
+  const displayed = news.slice(0, 3)
 
   return (
     <section
@@ -21,30 +50,19 @@ export function WorkSection() {
         </div>
 
         <div className="space-y-6 md:space-y-8">
-          {[
-            {
-              number: "01",
-              title: "Linux под угрозой: критическая уязвимость в ядре 6.8",
-              category: "Безопасность",
-              year: "Апр 2026",
-              direction: "left",
-            },
-            {
-              number: "02",
-              title: "Kubernetes 1.31: что нового для кластеров",
-              category: "Контейнеризация",
-              year: "Апр 2026",
-              direction: "right",
-            },
-            {
-              number: "03",
-              title: "Ansible vs Terraform: что выбрать в 2026",
-              category: "Инструменты",
-              year: "Май 2026",
-              direction: "left",
-            },
-          ].map((project, i) => (
-            <ProjectCard key={i} project={project} index={i} isVisible={isVisible} />
+          {displayed.map((item, i) => (
+            <ProjectCard
+              key={item.id}
+              project={{
+                number: String(i + 1).padStart(2, "0"),
+                title: item.title,
+                category: item.category,
+                year: item.published_at,
+                direction: i % 2 === 0 ? "left" : "right",
+              }}
+              index={i}
+              isVisible={isVisible}
+            />
           ))}
         </div>
       </div>
